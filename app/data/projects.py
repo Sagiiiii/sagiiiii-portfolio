@@ -97,6 +97,42 @@ PROJECTS = [
         "category": ["mobile"],
         "featured": False,
     },
+    # proyecto 5
+    {
+        "id": 5,
+        "title": "Sagiii.dev — Portfolio Personal",
+        "short_desc": "Portfolio personal desarrollado con Python + Flask, tema oscuro naranja fox. Muestra proyectos, CV y formulario de contacto.",
+        "description": """Portfolio personal diseñado y desarrollado desde cero con Python y Flask, 
+        implementando un tema oscuro con paleta de colores fox/naranja personalizada.
+
+        Este mismo sitio que estás viendo fue construido con:
+        • Arquitectura Flask con Blueprints para separación de responsabilidades
+        • Bootstrap 5 con Dark Mode nativo + CSS personalizado (variables fox)
+        • Templates Jinja2 con herencia de plantillas (base.html)
+        • Proyectos gestionados desde archivo Python sin base de datos
+        • Formulario de contacto con Flask-Mail + Gmail SMTP
+        • Preloader animado con sessionStorage para primera visita
+        • Diseño responsive adaptado a móvil, tablet y desktop
+        • Imagen de perfil circular con efecto glow pulsante naranja
+        • Filtros de proyectos por categoría: Web, Frontend, Backend, Mobile, Data Science
+
+        Páginas incluidas:
+        • Inicio — Hero con foto, badges de tecnologías y proyectos destacados
+        • Proyectos — Galería con filtros y detalle de cada proyecto
+        • Sobre mí — CV completo, experiencia profesional y formación académica
+        • Contacto — Formulario funcional con envío directo a Gmail
+        • Próximamente — Página para proyectos en desarrollo""",
+        "technologies": ["Python", "Flask", "Bootstrap 5", "Jinja2", "CSS", "JavaScript",
+                        "Flask-Mail", "HTML", "Git"],
+        "github_urls": [
+            {"label": "Repositorio", "url": "https://github.com/Sagiiiii/sagiiiii-portfolio"},
+        ],
+        "live_url": "",
+        "image_url": "/static/img/FOX2.jpg",
+        "category": ["web", "frontend"],
+        "featured": True,
+    },
+
     # proyecto n
 ]
 
