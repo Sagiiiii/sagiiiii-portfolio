@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}Contacto — David.dev{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+
+            <div class="text-center mb-5">
+                <h1 class="section-title h2">¿Hablamos? <span>🦊</span></h1>
+                <p style="color:var(--text-muted)">
+                Disponible para proyectos freelance, trabajo en equipo o simplemente conversar sobre tecnología.
+                </p>
+            </div>
+            <hr class="fox-divider">
+
+            <div class="card p-4 p-md-5">
+                <form method="POST">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-muted small">Nombre *</label>
+                            <input type="text" name="name" class="form-control"
+                                style="background:var(--bg-card2);border-color:#444;color:var(--text)"
+                                placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-muted small">Email *</label>
+                            <input type="email" name="email" class="form-control"
+                                style="background:var(--bg-card2);border-color:#444;color:var(--text)"
+                                placeholder="tu@email.com" required>
+                        </div>
+                        <div class="col-12">
+                        <label class="form-label text-muted small">Asunto</label>
+                            <input type="text" name="subject" class="form-control"
+                                style="background:var(--bg-card2);border-color:#444;color:var(--text)"
+                                placeholder="¿En qué puedo ayudarte?">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-muted small">Mensaje *</label>
+                            <textarea name="message" class="form-control" rows="6"
+                                style="background:var(--bg-card2);border-color:#444;color:var(--text);resize:vertical"
+                                placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        </div>
+                        <div class="col-12 pt-2">
+                            <button type="submit" class="btn btn-fox w-100 py-2">
+                                <i class="bi bi-send me-2"></i>Enviar mensaje
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Info de contacto alternativa -->
+            <div class="row g-3 mt-3 text-center">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <i class="bi bi-github" style="font-size:1.5rem;color:var(--fox)"></i>
+                        <p class="small mt-2 mb-0 text-muted">GitHub</p>
+                        <a href="https://github.com/Sagiiiii?tab=repositories" target="_blank"
+                        style="color:var(--fox);font-size:.85rem">@Sagiii*</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <i class="bi bi-linkedin" style="font-size:1.5rem;color:var(--fox)"></i>
+                        <p class="small mt-2 mb-0 text-muted">LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/david-garcia-giron-3205322b6/" style="color:var(--fox);font-size:.85rem">david garcia giron</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <i class="bi bi-envelope-fill" style="font-size:1.5rem;color:var(--fox)"></i>
+                        <p class="small mt-2 mb-0 text-muted">Email</p>
+                        <a href="sagitaforever64@gmail.com"
+                        style="color:var(--fox);font-size:.85rem">sagitaforever64@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

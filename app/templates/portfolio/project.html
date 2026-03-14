@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}{{ p.title }} — David.dev{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb" style="background:transparent">
+            <li class="breadcrumb-item">
+                <a href="{{ url_for('portfolio.index') }}" style="color:var(--fox)">Inicio</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{{ url_for('portfolio.projects') }}" style="color:var(--fox)">Proyectos</a>
+            </li>
+            <li class="breadcrumb-item active" style="color:var(--text-muted)">
+                {{ p.title }}
+            </li>
+        </ol>
+    </nav>
+
+    <div class="row g-5">
+
+        <!-- Imagen -->
+        <div class="col-lg-7">
+            {% if p.image_url %}
+            <img src="{{ p.image_url }}" class="img-fluid rounded"
+                style="width:100%;max-height:440px;object-fit:cover;
+                        border:1px solid var(--border);
+                        box-shadow:0 8px 32px var(--fox-glow)"
+                alt="{{ p.title }}">
+            {% else %}
+            <div style="height:380px;background:var(--bg-card2);border-radius:12px;
+                        display:flex;align-items:center;justify-content:center;
+                        font-size:5rem;border:1px solid var(--border)">🦊</div>
+            {% endif %}
+        </div>
+
+        <!-- Info -->
+        <div class="col-lg-5">
+            <span class="tech-badge mb-3 d-inline-block">{{ p.category[0] }}</span>
+            <h1 class="section-title h2 mb-3">{{ p.title }}</h1>
+            <p style="color:var(--text-muted);line-height:1.9;white-space:pre-line">
+                {{ p.description }}
+            </p>
+
+            <!-- Tecnologías -->
+            {% if p.technologies %}
+            <h6 class="mt-4 mb-2 fw-bold" style="color:var(--fox)">
+                <i class="bi bi-tools me-2"></i>Tecnologías usadas
+            </h6>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                {% for t in p.technologies %}
+                <span class="tech-badge">{{ t }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Repositorios GitHub -->
+            {% if p.github_urls %}
+            <h6 class="mt-3 mb-2 fw-bold" style="color:var(--fox)">
+                <i class="bi bi-github me-2"></i>Repositorios
+            </h6>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                {% for repo in p.github_urls %}
+                <a href="{{ repo.url }}" target="_blank" class="btn btn-fox btn-sm">
+                    <i class="bi bi-github me-1"></i>{{ repo.label }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Live URL -->
+            <h6 class="fw-bold mb-2" style="color:var(--fox)">
+                <i class="bi bi-globe me-2"></i>Demo en vivo
+            </h6>
+            <a href="{{ p.live_url or url_for('portfolio.coming_soon') }}"
+                {% if p.live_url %}target="_blank"{% endif %}
+                class="btn btn-outline-fox mb-4">
+                <i class="bi bi-box-arrow-up-right me-2"></i>
+                {% if p.live_url %}Ver proyecto en vivo{% else %}Próximamente{% endif %}
+            </a>
+
+            <!-- Volver -->
+            <div class="mt-2">
+                <a href="{{ url_for('portfolio.projects') }}"
+                    style="color:var(--text-muted);font-size:.9rem;text-decoration:none">
+                    <i class="bi bi-arrow-left me-1"></i>Volver a proyectos
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
