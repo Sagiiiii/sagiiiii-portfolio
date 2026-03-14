@@ -127,7 +127,7 @@ PROJECTS = [
         "github_urls": [
             {"label": "Repositorio", "url": "https://github.com/Sagiiiii/sagiiiii-portfolio"},
         ],
-        "live_url": "",
+        "live_url": "https://sagiiiii-portfolio.onrender.com",
         "image_url": "/static/img/FOX2.jpg",
         "category": ["web", "frontend"],
         "featured": True,
