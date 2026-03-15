@@ -10,7 +10,7 @@ PROJECTS = [
             {"label": "Tienda",  "url": "https://github.com/Sagiiiii/ecommerce_tienda"},
             {"label": "Admin",   "url": "https://github.com/Sagiiiii/ecommerce_admin"},
         ],
-        "live_url": "",
+        "live_url": "https://ecommercesoreustienda.netlify.app",
         "image_url": "/static/img/soreus.jpeg",
         "category": ["frontend", "web", "mobile"],
         "featured": True,
@@ -25,7 +25,7 @@ PROJECTS = [
         "github_urls": [
             {"label": "Backend", "url": "https://github.com/Sagiiiii/eccommerce_back"},
         ],
-        "live_url": "",
+        "live_url": "https://ecommercesoreusadmin.netlify.app",
         "image_url": "/static/img/soreus_back.jpg",
         "category": ["backend", "web"],
         "featured": False,
