@@ -133,6 +133,42 @@ PROJECTS = [
         "featured": True,
     },
 
+    # proyecto 6
+    {
+        "id": 6,
+        "title": "Dashboard de Análisis de Datos",
+        "short_desc": "Web app que analiza CSV/Excel automáticamente: gráficos, estadísticas descriptivas y predicciones con regresión lineal.",
+        "description": """Aplicación web de ciencia de datos desarrollada con Python y Flask que permite
+        analizar cualquier archivo CSV o Excel sin escribir código, generando resultados en segundos.
+        
+        Desarrollado con:
+        • Backend Flask con Blueprint y arquitectura modular
+        • Pandas + NumPy para carga, limpieza y análisis estadístico de datos
+        • Scikit-learn (LinearRegression) para predicción de tendencias con R²
+        • Chart.js 4 para gráficos de líneas interactivos y responsivos
+        • Detección automática de columnas de fecha para eje temporal real
+        • Drag & Drop de archivos con feedback visual en tiempo real
+        • API REST interna (Flask JSON) que separa análisis del frontend
+        • Deploy en Render con Gunicorn como servidor WSGI de producción
+
+        Funcionalidades principales:
+        • Subida de CSV o Excel (hasta 16 MB) por clic o arrastre
+        • Gráficos automáticos de todas las columnas numéricas (hasta 5 series)
+        • Estadísticas: media, mediana, varianza, desviación estándar, mín/máx
+        • Predicción de próximos 5 valores con indicador de tendencia
+        • Coeficiente R² para evaluar la confiabilidad de la predicción
+        • Compatible con datos de ventas, salud, educación, clima y más""",
+        "technologies": ["Python", "Flask", "Pandas", "NumPy", "Scikit-learn",
+                        "Chart.js", "JavaScript", "HTML", "CSS", "Git", "Render"],
+        "github_urls": [
+            {"label": "Repositorio", "url": "https://github.com/Sagiiiii/dashboard-analisis-datos"},
+        ],
+        "live_url": "https://dashboard-analisis-datos.onrender.com/",
+        "image_url": "/static/img/dashboard-preview.jpg",
+        "category": ["web", "backend", "data science"],
+        "featured": True,
+    },
+
     # proyecto n
 ]
 
