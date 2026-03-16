@@ -163,7 +163,7 @@ PROJECTS = [
         "github_urls": [
             {"label": "Repositorio", "url": "https://github.com/Sagiiiii/dashboard-analisis-datos"},
         ],
-        "live_url": "https://dashboard-analisis-datos.onrender.com/",
+        "live_url": "/static/img/dashboard-la-gi-6.png",
         "image_url": "/app/static/img/dashboard-la-gi-6.png",
         "category": ["web", "backend", "data science"],
         "featured": True,
